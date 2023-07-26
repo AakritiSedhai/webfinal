@@ -124,7 +124,7 @@
             <th scope="row" th:text="${iStat.index + 1}">1</th>
             <td th:text="${product.name}">Product Name</td>
             <td th:text="${product.category.name}">Category</td>
-            <td><img th:src="@{/productImages/__${product.imageName}__}" height="100px" width="100px" alt="Product Image"></td>
+            <td><img src="" height="100px" width="100px"  th:src="@{${'/productImages/' + product.imageName}}"></td>
             <td><a th:href="@{/admin/product/delete/{id}(id=${product.id})}" class="btn btn-danger rounded-pill">Delete</a></td>
             <td><a th:href="@{/admin/product/update/{id}(id=${product.id})}" class="btn btn-warning rounded-pill">Update</a></td>
         </tr>

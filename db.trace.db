@@ -4,3 +4,15 @@ SELECT * FROM CATEGORY CATEGORY PRODUCT [42000-200]
 2023-07-26 12:06:38 jdbc[13]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM CATEGORY CATEGORY PRODUCT[*]"; SQL statement:
 SELECT * FROM CATEGORY CATEGORY PRODUCT [42000-200]
+2023-07-26 12:44:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "STRINGDECODE('Net Content : 50 ml\r\nFor Oily, Combination & Acne Prone Skin\r\nFRESH CLEAR SKIN: Here''s a face wash that clean... (737)"; SQL statement:
+insert into product (category_id, description, image_name, name, price, weight, id) values (?, ?, ?, ?, ?, ?, ?) [22001-200]
+2023-07-26 12:49:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "STRINGDECODE('Net Content : 50 ml\r\nFor Oily, Combination & Acne Prone Skin\r\nFRESH CLEAR SKIN: Here''s a face wash that clean... (320)"; SQL statement:
+insert into product (category_id, description, image_name, name, price, weight, id) values (?, ?, ?, ?, ?, ?, ?) [22001-200]
+2023-07-26 12:51:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "STRINGDECODE('Net Content : 50 ml\r\nFor Oily, Combination and acne-prone skin\r\nFresh, CLEAR SKIN: Here''s a face wash that cl... (326)"; SQL statement:
+insert into product (category_id, description, image_name, name, price, weight, id) values (?, ?, ?, ?, ?, ?, ?) [22001-200]
+2023-07-26 12:53:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "STRINGDECODE('Net Content : 50 ml\r\nFor Oily, Combination and acne-prone skin\r\nFresh, CLEAR SKIN: Here''s a face wash that cl... (326)"; SQL statement:
+insert into product (category_id, description, image_name, name, price, weight, id) values (?, ?, ?, ?, ?, ?, ?) [22001-200]
