@@ -13,6 +13,67 @@
     <title>Document</title>
 </head>
 <body>
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #fde5de;
+    }
+    .navbar {
+        background-color: #ffffff;
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-brand img {
+        max-width: 100%;
+        height: auto;
+        max-height: 40px;
+    }
+
+    .navbar-brand span {
+        font-size: 24px;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+    .btn-primary {
+        border-radius: 50px;
+        background-color: #ff836f;
+        border-color: #ff836f;
+        color: #ffffff;
+        font-size: 16px;
+        padding: 10px 20px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+        background-color: #ff6b5d;
+        border-color: #ff6b5d;
+    }
+
+    .navbar-toggler-icon {
+        color: #ff836f;
+        font-size: 24px;
+    }
+
+    .navbar-nav .nav-link {
+        color: #555555;
+        font-size: 16px;
+    }
+
+    .navbar-nav .nav-item.active .nav-link,
+    .navbar-nav .nav-item:hover .nav-link {
+        color: #ff836f;
+    }
+    .navbar-nav .nav-item {
+        margin-left: 1rem;
+    }
+
+    .navbar-nav .nav-item .badge {
+        font-size: 15px;
+
+    }
+
+</style>
 
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light" >
@@ -94,7 +155,7 @@
                                                         class="fas fa-trash-alt mr-1"></i> Remove item </a>
 
                                             </div>
-                                            <p class="mb-0"><span><strong>₹<span th:text="${item.price}"></span></strong></span></p>
+                                            <p class="mb-0"><span><strong>Rs.<span th:text="${item.price}"></span></strong></span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -125,7 +186,7 @@
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
                                     Amount Payable
-                                    <span>₹<span th:text="${total}"></span></span>
+                                    <span>Rs.<span th:text="${total}"></span></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center px-0">
                                     Shipping
@@ -138,7 +199,7 @@
                                             <p class="mb-0">(including VAT)</p>
                                         </strong>
                                     </div>
-                                    <span><strong>₹<span th:text="${total}"></span></strong></span>
+                                    <span><strong>Rs.<span th:text="${total}"></span></strong></span>
                                 </li>
                             </ul>
 

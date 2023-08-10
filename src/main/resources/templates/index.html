@@ -11,7 +11,34 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
           integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <title>Document</title>
-    
+
+    <style>
+        .hero {
+            text-align: center;
+            background-color: #f7f7f7; /* Your theme color */
+            padding: 50px 0;
+        }
+
+        .hero h1 {
+            font-family: sans-serif;
+            font-size: 36px;
+            color: #fde5de;
+             /* Text color */
+        }
+
+        .hero img {
+            max-width: 100%;
+        }
+
+        .cta-button {
+            margin-top: 20px;
+        }
+        .cta-button a {
+            background-color: #fde5de; /* Button color */
+            border-color: #fde5de; /* Button border color */
+            color: white; /* Button text color */
+        }
+    </style>
 </head>
 <body>
 
@@ -52,7 +79,15 @@
     </div>
 </nav>
 
-
+<section class="hero">
+    <div class="container">
+        <h1>Welcome to Skincare Alchemy</h1>
+        <img th:src="@{/images/tagline.gif}" src="../static/images/tagline.gif" alt="Dynamic GIF">
+        <div class="cta-button">
+            <a class="btn btn-primary" th:href="@{/shop}" >Shop Now</a>
+        </div>
+    </div>
+</section>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
