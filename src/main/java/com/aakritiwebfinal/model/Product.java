@@ -1,11 +1,17 @@
 package com.aakritiwebfinal.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Data
+
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
